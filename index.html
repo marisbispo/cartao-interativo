@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/estilo.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+
+<body>
+  <div class="conteudo">
+    <div class="parte1"></div>
+    <div class="cartao-frente">
+      <p class="numero-cartao">0000 0000 0000 0000</p>
+      <p class="nome-cartao">Jane Appleseed</p>
+      <p class="data-cartao">00/00</p>
+      <img src="/images/bg-card-front.png" class="frente" />
+    </div>
+    <div class="cartao-atras">
+      <p class="cvc-cartao">000</p>
+      <img src="/images/bg-card-back.png" class="frente" />
+    </div>
+    <form class="info-cartao">
+      <label>Cardholder name</label>
+      <input type="text" placeholder="e.g Jane Appleseed" />
+      <label>Card Number</label>
+      <input type="number" placeholder="e.g 1234 5674 9123 0000" />
+      <div class="info-data-cvc">
+        <div class="info-data">
+          <label>Exp. Date</label>
+          <input type="number" placeholder="MM" />
+          <input type="number" placeholder="YY" />
+        </div>
+        <div class="info-cvc">
+          <label>CVC</label>
+          <input type="number" placeholder="e.g 123" />
+        </div>
+      </div>
+      <button class="enviar">Confirm</button>
+    </form>
+  </div>
+</body>
+
+</html>

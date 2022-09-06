@@ -1,0 +1,110 @@
+body{
+  margin:0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.125rem;
+}
+
+.conteudo{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width:100%;
+  height: 100vh;
+  position: relative;
+}
+
+.parte1{
+  background:url(/images/bg-main-desktop.png) no-repeat;
+}
+
+.cartao-frente{
+  position: absolute;
+  left: 200px;
+  top: 180px;
+  color:white;
+}
+
+.numero-cartao{
+  position: absolute;
+  font-size:1.8rem;
+  padding-left: 25px;
+}
+
+.nome-cartao{
+  text-transform: uppercase;
+  position: absolute;
+  padding-left:25px;
+  top:180px;
+}
+
+.data-cartao{
+  position: absolute;
+  padding-right:25px;
+  top:180px;
+  right:0;
+}
+
+.cartao-atras{
+  position: absolute;
+  left: 280px;
+  top: 450px;
+}
+
+.cvc-cartao{
+  position: absolute;
+  right:0;
+  top:90px;
+  color:white;
+  padding-right:50px;
+}
+
+
+.info-cartao{
+  align-self: center;
+    justify-self: center;
+    grid-column: span 2;
+    width:400px;
+}
+
+label{
+  display:block;
+  text-transform: uppercase;
+  font-size:0.8rem;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  box-sizing: border-box;
+  margin-bottom:18px;
+  border-radius: 8px;
+  border:1.5px solid hsl(270, 3%, 87%);
+}
+
+input::placeholder{
+  color: hsl(270, 3%, 87%);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size:1rem;
+}
+
+.info-data-cvc{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.info-data input{
+    width: 40%;
+}
+
+
+.enviar{
+  display:block;
+  width:100%;
+  padding:15px;
+  background: hsl(278, 68%, 11%);
+  color:white;
+  border:none;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-top:18px;
+  font-size:1.1rem;
+}
