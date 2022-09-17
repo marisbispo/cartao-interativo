@@ -3,17 +3,28 @@ const nomeCartao = document.querySelector('[data-cartao="name"]');
 
 const numeroInput = document.querySelector('[data-input="numero"]');
 const numeroCartao = document.querySelector('[data-cartao="numero"]');
+const numeroCVC = document.querySelector('[data-cartao="cvc"]');
 
 const dataCartao = document.querySelector('[data-cartao="vencimento"]');
 const dataInputMes = document.querySelector('[data-input="mes"]');
 const dataInputAno = document.querySelector('[data-input="ano"]');
 const dataInputVencimento = document.querySelector('[data-input="vencimento"]');
+const dataInputCVC = document.querySelector('[data-input="cvc"]');
 
 nomeInput.addEventListener('input', colocarNome);
 
 function colocarNome(event) {
-  console.log(event.target.value);
-  nomeCartao.innerText = event.target.value;
+  const regexNome = /^[A-Z a-z]+$/;
+  if (event.target.value.match(regexNome)) {
+    nomeCartao.innerText = event.target.value;
+  } else {
+    console.log('nome invalido');
+  }
+
+  if (event.target.value.length > 20) {
+    nomeCartao.innerText = event.target.value.substr(0, 20);
+    event.target.value = event.target.value.substr(0, 20);
+  }
 }
 
 numeroInput.addEventListener('input', colocarNumero);
@@ -44,9 +55,15 @@ function colocarVencimento(event) {
 
   if (event.target === dataInputAno && event.target.value.match(regex)) {
     ano.innerText = event.target.value;
+  }
+}
 
-    // if (event.target.value.length > 3) {
-    //   ano.innerText = event.target.value.substr(1, 2);
-    // }
+dataInputCVC.addEventListener('input', adicionarCVC);
+
+function adicionarCVC(event) {
+  numeroCVC.innerText = event.target.value;
+  if (event.target.value.length > 3) {
+    event.target.value = event.target.value.substr(0, 2);
+    numeroCVC.innerText = event.target.value.substr(0, 20);
   }
 }
