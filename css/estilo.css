@@ -112,6 +112,23 @@ input::placeholder{
   cursor:pointer
 }
 
+.enviado{
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  grid-column: span 2;
+}
+
+.enviado h2{
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color:hsl(278, 68%, 11%);
+}
+
+.enviado p{
+  color: hsl(279, 6%, 55%)
+}
+
 @media (max-width: 1600px){
 
   .cartao-frente{
