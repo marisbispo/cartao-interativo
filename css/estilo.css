@@ -4,6 +4,14 @@ body{
   font-size: 1.125rem;
 }
 
+ul{
+  margin: 0 0 10px 0;
+  list-style: none;
+  padding:0;
+  color:red;
+  font-size: 0.9rem;
+}
+
 .conteudo{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
