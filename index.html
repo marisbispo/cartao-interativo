@@ -30,22 +30,27 @@
       <p class="cvc-cartao" data-cartao="cvc">000</p>
       <img src="/images/bg-card-back.png" class="atras" />
     </div>
-    <form class="info-cartao">
+    <form class="info-cartao" data-form="formulario">
       <label>Cardholder name</label>
       <input type="text" placeholder="e.g Jane Appleseed" data-input="name" />
+      <ul class="erro-nome"></ul>
       <label>Card Number</label>
       <input type="number" placeholder="e.g 1234 5674 9123 0000" data-input="numero" />
+      <ul class="erro-numero"></ul>
       <div class="info-data-cvc">
         <div class="info-data" data-input="vencimento">
           <label>Exp. Date</label>
           <input type="number" placeholder="MM" data-input="mes" />
           <input type="number" placeholder="YY" data-input="ano" />
+          <ul class="erro-data"></ul>
         </div>
         <div class="info-cvc">
           <label>CVC</label>
           <input type="number" placeholder="e.g 123" data-input="cvc" />
+          <ul class="erro-cvc"></ul>
         </div>
       </div>
+      <ul class="erro-Msg"></ul>
       <button class="enviar" data-enviar>Confirm</button>
     </form>
   </div>
